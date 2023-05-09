@@ -11,7 +11,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230509025301">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230509200329">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<meta name="robots" content="noindex, nofollow">
 	<meta name="theme-color" content="#3A477C">
@@ -21,7 +21,7 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header data-lp class="header">
 			<div class="header__container">
 				<div class="header__logo">
 					<a href="index.html">
@@ -34,7 +34,7 @@
 					<a href="#" class="links__social _icon-wh" title="WhatsApp"></a>
 					<a href="#" class="links__social  _icon-tg" title="Telegram"></a>
 					<a href="tel:79055957466" class="links__phone h">+7 (905) 595-74-66</a>
-					<a href="tel:74953639972" class="links__main-phone _icon-phone h"><span>+7-495-363-99-72</span></a>
+					<a href="tel:74953639972" class="links__main-phone _icon-phone h" title="Позвонить"><span>+7-495-363-99-72</span></a>
 				</nav>
 			</div>
 		</header>
@@ -92,7 +92,7 @@
 				</div>
 			</section>
 			<section class="cases-page__request bg request">
-				<div class="request__container">
+				<div class="request__container bg bg-request">
 					<form action="#" class="request__form form__form">
 						<input autocomplete="off" type="text" name="form[]" placeholder="Ваше имя" class="form__input">
 						<input autocomplete="off" type="email" name="form[]" placeholder="Ваш e-mail" class="form__input">
@@ -146,9 +146,9 @@
 	</div>
 	<div id="form-success" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
-			<aside class="popup__content bg">
+			<aside class="popup__content bg bg-popup">
 				<button data-close type="button" class="popup__close" title="Закрыть"></button>
-				<div class="popup__body success">
+				<div class="popup__body success bg bg-popup2">
 					<h2 class="success__title">Ваша заявка принята.</h2>
 					<p class="success__text">Мы перезвоним вам в ближайшее время. Если нет времени ждать, то звоните или пишите в мессенджеры:</p>
 					<a href="tel:74953639972" class="success__main-phone _icon-phone h"><span>+7-495-363-99-72</span></a>
@@ -164,9 +164,9 @@
 	</div>
 	<div id="form-request" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
-			<aside class="popup__content bg">
+			<aside class="popup__content bg bg-popup">
 				<button data-close type="button" class="popup__close" title="Закрыть"></button>
-				<div class="popup__body success">
+				<div class="popup__body success bg bg-popup2">
 					<form action="#" class="main__form-main form__form">
 						<input autocomplete="off" type="text" name="form[]" placeholder="Ваше имя" class="form__input">
 						<input autocomplete="off" type="email" name="form[]" placeholder="Ваш e-mail" class="form__input">
@@ -180,7 +180,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20230509025301"></script>
+	<script src="js/app.min.js?_v=20230509200329"></script>
 </body>
 
 </html>

@@ -11,7 +11,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230509025301">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230509200329">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<meta name="robots" content="noindex, nofollow">
 	<meta name="theme-color" content="#3A477C">
@@ -21,7 +21,7 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header data-lp class="header">
 			<div class="header__container">
 				<div class="header__logo">
 					<a href="index.html">
@@ -34,7 +34,7 @@
 					<a href="#" class="links__social _icon-wh" title="WhatsApp"></a>
 					<a href="#" class="links__social  _icon-tg" title="Telegram"></a>
 					<a href="tel:79055957466" class="links__phone h">+7 (905) 595-74-66</a>
-					<a href="tel:74953639972" class="links__main-phone _icon-phone h"><span>+7-495-363-99-72</span></a>
+					<a href="tel:74953639972" class="links__main-phone _icon-phone h" title="Позвонить"><span>+7-495-363-99-72</span></a>
 				</nav>
 			</div>
 		</header>
@@ -55,10 +55,10 @@
 				</div>
 				<img src="img/main/map.svg" class="main__background" alt="Изображение фона">
 			</section>
-			<section class="main-page__services services bg">
+			<section class="main-page__services services">
 				<div class="services__container">
 					<h2 class="services__title h2">Наши услуги</h2>
-					<ol class="services__list counter">
+					<ol class="services__list counter bg bg-services">
 						<li class="services__item">
 							<img src="img/main/service1.svg" class="services__image" alt="Иконка услуги">
 							<h3 class="services__name">Таможенное оформление</h3>
@@ -78,43 +78,43 @@
 				</div>
 				<!-- <img src="img/main/Union.svg" class="services__background" alt="Изображение фона"> -->
 			</section>
-			<!-- <section class="main-page__advantages advantages">
-	<div class="advantages__container">
-		<h2 class="advantages__title">Преимущества</h2>
-		<ul class="advantages__list">
-			<li class="advantages__item">
-				<img src="" alt="Изображение преимущества" class="advantages__image">
-				<div class="advantages__info">
-					<p>Свои торговые дома в</p>
-					<ul>
-						<li>Турции</li>
-						<li>Армении</li>
-						<li>ОАЭ</li>
-						<li>Китае</li>
+			<section class="main-page__advantages advantages">
+				<div class="advantages__container">
+					<h2 class="advantages__title">Преимущества</h2>
+					<ul class="advantages__list">
+						<li class="advantages__item">
+							<div class="advantages__image"><img src="img/main/advantage1.svg" alt="Изображение преимущества"></div>
+							<div class="advantages__info">
+								<p>Свои торговые дома в</p>
+								<ul>
+									<li>Турции</li>
+									<li>Армении</li>
+									<li>ОАЭ</li>
+									<li>Китае</li>
+								</ul>
+							</div>
+						</li>
+						<li class="advantages__item">
+							<div class="advantages__image"><img src="img/main/advantage2.svg" alt="Изображение преимущества"></div>
+							<div class="advantages__info">
+								<p>Налаженная схема по взаиморасчетам с зарубежными странами, в том числе с</p>
+								<ul>
+									<li>ЕС</li>
+									<li>Великобританией</li>
+									<li>США</li>
+								</ul>
+							</div>
+						</li>
+						<li class="advantages__item">
+							<div class="advantages__image"><img src="img/main/advantage3.svg" alt="Изображение преимущества"></div>
+							<div class="advantages__info">
+								<p>Отдел логистики, отдел таможенного оформления и фин служба.</p>
+								<p>Все мы работаем над тем, что бы вы могли закупить и получить товар у себя на складе в России.</p>
+							</div>
+						</li>
 					</ul>
 				</div>
-			</li>
-			<li class="advantages__item">
-				<img src="" alt="Изображение преимущества" class="advantages__image">
-				<div class="advantages__info">
-					<p>Налаженная схема по взаиморасчетам с зарубежными странами, в том числе с</p>
-					<ul>
-						<li>ЕС</li>
-						<li>Великобританией</li>
-						<li>США</li>
-					</ul>
-				</div>
-			</li>
-			<li class="advantages__item">
-				<img src="" alt="Изображение преимущества" class="advantages__image">
-				<div class="advantages__info">
-					<p>Отдел логистики, отдел таможенного оформления и фин служба.</p>
-					<p>Все мы работаем над тем, что бы вы могли закупить и получить товар у себя на складе в России.</p>
-				</div>
-			</li>
-		</ul>	
-	</div>
-</section> -->
+			</section>
 			<section class="main-page__form form">
 				<h2 class="form__title">Отправить нам заявку</h2>
 				<form data-dev data-popup-message="#form-success" action="#" class="main-page__form form__form">
@@ -157,22 +157,20 @@
 					</ol>
 				</div>
 			</section>
-			<!-- <section class="main-page__trains trains">
-	<div class="trains__container">
-		<div class="trains__content">
-			<h2 class="trains__title">Прямые поезда из Китая</h2>
-			<p class="trains__text">Ставки на <span>Апрель</span>:</p>
-			<ul class="trains__list">
-				<li class="trains__item">FOB Shanghai / Ningbo / Yantian / Xiamen-FOR Moscow =8800$ *</li>
-				<li class="trains__item">Транзитное время с даты выхода поезда 16-20 дней</li>
-				<li class="trains__item">Оперативная информация из Китая от сотрудников нашего офиса</li>
-				<li class="trains__item">Консолидация и обработка ваших товаров у нас на складе в Китае</li>
-			</ul>
-			<p class="trains__text">* Не является публичной офертой. Конечная стоимость услуг рассчитывается из конкретных параметров сделки и согласовывается с нашим менеджером</p>	
-		</div>
-		<div class="trains__image"><picture><source srcset="img" type="image/webp"><img src="img" alt="Изображение грузоперевозок"></picture></div>
-	</div>
-</section> -->
+			<section class="main-page__trains trains">
+				<div class="trains__content">
+					<h2 class="trains__title">Прямые поезда из Китая</h2>
+					<p class="trains__label">Ставки на <span>Апрель</span>:</p>
+					<ul class="trains__list">
+						<li class="trains__item">FOB Shanghai / Ningbo / Yantian / Xiamen-FOR Moscow =8800$ *</li>
+						<li class="trains__item">Транзитное время с даты выхода поезда 16-20 дней</li>
+						<li class="trains__item">Оперативная информация из Китая от сотрудников нашего офиса</li>
+						<li class="trains__item">Консолидация и обработка ваших товаров у нас на складе в Китае</li>
+					</ul>
+					<p class="trains__text">* Не является публичной офертой. Конечная стоимость услуг рассчитывается из конкретных параметров сделки и согласовывается с нашим менеджером</p>
+				</div>
+				<div class="trains__image"><picture><source srcset="img/main/transport.webp" type="image/webp"><img src="img/main/transport.jpg" alt="Изображение грузоперевозок"></picture></div>
+			</section>
 			<section class="main-page__form form">
 				<h2 class="form__title">Отправить нам заявку</h2>
 				<form data-dev data-popup-message="#form-success" action="#" class="main-page__form form__form">
@@ -181,7 +179,7 @@
 				</form>
 			</section>
 			<section class="main-page__info info">
-				<div class="info__container bg">
+				<div class="info__container bg bg-info">
 					<div class="info__image"><picture><source data-srcset="img/main/info.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/main/info.jpg" alt="Изображение грузоперевозок" loading="lazy"></picture></div>
 					<div class="info__content">
 						<h2 class="info__title">Если вы ищете надежного партнера для доставки грузов, то компания Right Flow готова помочь.</h2>
@@ -291,7 +289,7 @@
 				</div>
 			</section>
 			<section class="main-page__video video">
-				<div class="video__container">
+				<div class="video__container bg bg-video">
 					<h2 hidden>Видео грузоперевозок</h2>
 					<div class="video__slider swiper">
 						<div class="video__wrapper swiper-wrapper">
@@ -322,7 +320,7 @@
 				</div>
 			</section>
 			<section class="main-page__faq faq">
-				<div class="faq__container">
+				<div class="faq__container bg bg-faq">
 					<h2 class="faq__title h2">Часто задаваемые вопросы и ответы</h2>
 					<div data-spollers class="faq__spollers">
 						<button data-spoller class="faq__question" type="button">Как осуществляется таможенное оформление груза?</button>
@@ -363,7 +361,7 @@
 			</section>
 			<section class="main-page__director director">
 				<div class="director__container">
-					<div class="director__image"><picture><source data-srcset="img/main/director.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/main/director.jpg" alt="Фотография директора"></picture></div>
+					<div class="director__image bg bg-director"><picture><source data-srcset="img/main/director.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/main/director.jpg" alt="Фотография директора"></picture></div>
 					<div class="director__content">
 						<h2 class="director__name">Василий Петрович</h2>
 						<span class="director__job">Генеральный директор Right Flow</span>
@@ -374,24 +372,25 @@
 					</div>
 				</div>
 			</section>
-			<!-- <section class="main-page__custom custom">
-  <div class="custom__container">
-    <h2 class="custom__title">Таможенное оформление</h2>
-    <ul class="custom__list">
-      <li class="custom__item">Таможенный представитель</li>
-      <li class="custom__item">Импортное таможенное оформление</li>
-      <li class="custom__item">Экспортное таможенное оформление</li>
-      <li class="custom__item">Режим АТА</li>
-      <li class="custom__item">Фито и ветеринарные грузы</li>
-      <li class="custom__item">Акцизные товары</li>
-    </ul>
-    <ul class="custom__values">
-      <li class="custom__value"><span>15</span>лет на рынке</li>
-      <li class="custom__value"><span>10</span>лет минимальный стаж декларанта</li>
-      <li class="custom__value"><span>1</span>час среднее время выпуска декларации</li>
-    </ul>
-  </div>
-</section> -->
+			<section class="main-page__custom custom">
+				<div class="custom__container">
+					<h2 class="custom__title">Таможенное оформление</h2>
+					<ul class="custom__list">
+						<li class="custom__item">Таможенный представитель</li>
+						<li class="custom__item">Импортное таможенное оформление</li>
+						<li class="custom__item">Экспортное таможенное оформление</li>
+						<li class="custom__item">Режим АТА</li>
+						<li class="custom__item">Фито и ветеринарные грузы</li>
+						<li class="custom__item">Акцизные товары</li>
+					</ul>
+					<ul class="custom__values">
+						<li class="custom__value"><span>15</span>лет на рынке</li>
+						<li class="custom__value"><span>10</span>лет минимальный стаж декларанта</li>
+						<li class="custom__value"><span>1</span>час среднее время выпуска декларации</li>
+					</ul>
+				</div>
+				<picture><source srcset="img/main/transport3.webp" type="image/webp"><img src="img/main/transport3.jpg" class="custom__background" alt="Изображение фона"></picture>
+			</section>
 			<section class="main-page__transport transport">
 				<div class="transport__container">
 					<h2 class="transport__title h2">Перевозки</h2>
@@ -424,7 +423,7 @@
 				</div>
 			</section>
 			<section class="main-page__request request">
-				<div class="request__container">
+				<div class="request__container bg bg-request">
 					<form action="#" class="request__form form__form">
 						<input autocomplete="off" type="text" name="form[]" placeholder="Ваше имя" class="form__input">
 						<input autocomplete="off" type="email" name="form[]" placeholder="Ваш e-mail" class="form__input">
@@ -478,9 +477,9 @@
 	</div>
 	<div id="form-success" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
-			<aside class="popup__content bg">
+			<aside class="popup__content bg bg-popup">
 				<button data-close type="button" class="popup__close" title="Закрыть"></button>
-				<div class="popup__body success">
+				<div class="popup__body success bg bg-popup2">
 					<h2 class="success__title">Ваша заявка принята.</h2>
 					<p class="success__text">Мы перезвоним вам в ближайшее время. Если нет времени ждать, то звоните или пишите в мессенджеры:</p>
 					<a href="tel:74953639972" class="success__main-phone _icon-phone h"><span>+7-495-363-99-72</span></a>
@@ -496,9 +495,9 @@
 	</div>
 	<div id="form-request" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
-			<aside class="popup__content bg">
+			<aside class="popup__content bg bg-popup">
 				<button data-close type="button" class="popup__close" title="Закрыть"></button>
-				<div class="popup__body success">
+				<div class="popup__body success bg bg-popup2">
 					<form action="#" class="main__form-main form__form">
 						<input autocomplete="off" type="text" name="form[]" placeholder="Ваше имя" class="form__input">
 						<input autocomplete="off" type="email" name="form[]" placeholder="Ваш e-mail" class="form__input">
@@ -512,7 +511,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20230509025301"></script>
+	<script src="js/app.min.js?_v=20230509200329"></script>
 </body>
 
 </html>
