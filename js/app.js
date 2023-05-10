@@ -524,6 +524,29 @@
                 for (let elem of phone_inputs) for (let ev of [ "input", "blur", "focus" ]) elem.addEventListener(ev, eventCalllback);
             }));
         }
+        function videoPlayer() {
+            const videos = document.querySelectorAll(".video__slide");
+            if (videos) videos.forEach((video => {
+                const videoBtn = video.querySelector(".video__btn");
+                const videoFrame = video.querySelector(".video__video");
+                videoBtn.addEventListener("click", (function() {
+                    videoBtn.style.display = "none";
+                    if (videoFrame && videoFrame.src.includes("youtube.com")) {
+                        videoFrame.src += "?autoplay=1";
+                        videoFrame.play();
+                    } else videoFrame.play();
+                }));
+                videoFrame.addEventListener("play", (() => {
+                    videoBtn.style.display = "none";
+                }));
+                videoFrame.addEventListener("pause", (() => {
+                    videoBtn.style.display = "block";
+                }));
+                videoFrame.addEventListener("ended", (() => {
+                    videoBtn.style.display = "block";
+                }));
+            }));
+        }
         function spollers() {
             const spollersArray = document.querySelectorAll("[data-spollers]");
             if (spollersArray.length > 0) {
@@ -4243,6 +4266,7 @@
         addLoadedClass();
         spollers();
         phoneMask();
+        videoPlayer();
         formFieldsInit({
             viewPass: false
         });
