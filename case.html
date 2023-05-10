@@ -11,7 +11,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230509200329">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230510151952">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<meta name="robots" content="noindex, nofollow">
 	<meta name="theme-color" content="#3A477C">
@@ -281,19 +281,20 @@
 						<div class="video__wrapper swiper-wrapper">
 							<div class="video__slide swiper-slide">
 								<div class="video__body">
-									<video data-src="img/1.mp4" class="video__video" class="lazy" controls loading="lazy"></video>
+									<!-- <video data-src="img/1.mp4" class="video__video" class="lazy" controls loading="lazy"></video> -->
+									<iframe class="video__video" src="https://www.youtube.com/embed/cQC4Fzg0zpA" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 									<button class="video__btn" type="button" title="Включить видео"></button>
 								</div>
 							</div>
 							<div class="video__slide swiper-slide">
 								<div class="video__body">
-									<video data-src="img/1.mp4" class="video__video" controls preload="metadata" loading="lazy"></video>
+									<!-- <video src="img/1.mp4" class="video__video" controls preload="metadata" loading="lazy"></video> -->
 									<button class="video__btn" type="button" title="Включить видео"></button>
 								</div>
 							</div>
 							<div class="video__slide swiper-slide">
 								<div class="video__body">
-									<video data-src="img/1.mp4" class="video__video" controls preload="metadata" loading="lazy"></video>
+									<!-- <video src="img/1.mp4" class="video__video" controls preload="metadata" loading="lazy"></video> -->
 									<button class="video__btn" type="button" title="Включить видео"></button>
 								</div>
 							</div>
@@ -414,7 +415,7 @@
 						<input autocomplete="off" type="text" name="form[]" placeholder="Ваше имя" class="form__input">
 						<input autocomplete="off" type="email" name="form[]" placeholder="Ваш e-mail" class="form__input">
 						<input data-required data-phone-pattern autocomplete="off" type="text" name="form[]" placeholder="Ваш номер телефона" class="form__input">
-						<button type="submit" class="form__submit btn">Отправить</button>
+						<button data-popup="#form-success" type="submit" class="form__submit btn">Отправить</button>
 						<p class="form__text">Отправляя заявку на нашем сайте, вы соглашаетесь с политикой конфеденциальности</p>
 					</form>
 					<div class="request__content">
@@ -497,7 +498,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20230509200329"></script>
+	<script src="js/app.min.js?_v=20230510151952"></script>
 </body>
 
 </html>
