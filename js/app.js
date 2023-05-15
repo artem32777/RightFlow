@@ -510,7 +510,7 @@
         function phoneMask() {
             document.addEventListener("DOMContentLoaded", (function() {
                 var eventCalllback = function(e) {
-                    var el = e.target, clearVal = el.dataset.phoneClear, pattern = el.dataset.phonePattern, matrix_def = "+7(___) ___-__-__", matrix = pattern ? pattern : matrix_def, i = 0, def = matrix.replace(/\D/g, ""), val = e.target.value.replace(/\D/g, "");
+                    var el = e.target, clearVal = el.dataset.phoneClear, pattern = el.dataset.phonePattern, matrix_def = "+7 (___) ___-__-__", matrix = pattern ? pattern : matrix_def, i = 0, def = matrix.replace(/\D/g, ""), val = e.target.value.replace(/\D/g, "");
                     if (clearVal !== "false" && e.type === "blur") if (val.length < matrix.match(/([\_\d])/g).length) {
                         e.target.value = "";
                         return;
@@ -769,6 +769,7 @@
                     if (buttonClose || !e.target.closest(`.${this.options.classes.popupContent}`) && this.isOpen) {
                         e.preventDefault();
                         this.close();
+                        bodyUnlock();
                         return;
                     }
                 }.bind(this));
@@ -776,6 +777,7 @@
                     if (this.options.closeEsc && e.which == 27 && e.code === "Escape" && this.isOpen) {
                         e.preventDefault();
                         this.close();
+                        bodyUnlock();
                         return;
                     }
                     if (this.options.focusCatch && e.which == 9 && this.isOpen) {
@@ -4261,6 +4263,19 @@
                 }));
             }
         }), 0);
+        function wpcf7Settings() {
+            document.querySelectorAll(".wpcf7-tel").forEach((el => {
+                el.dataset.required = "";
+                el.dataset.phonePattern = "";
+            }));
+            document.querySelectorAll("input").forEach((el => {
+                el.setAttribute("autocomplete", "off");
+            }));
+            document.addEventListener("wpcf7mailsent", (() => {
+                modules_flsModules.popup.open("#form-success");
+            }));
+        }
+        wpcf7Settings();
         window["FLS"] = false;
         isWebp();
         addLoadedClass();

@@ -11,7 +11,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230510161319">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230515130314">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<meta name="robots" content="noindex, nofollow">
 	<meta name="theme-color" content="#3A477C">
@@ -30,11 +30,11 @@
 					</a>
 				</div>
 				<button data-popup="#form-request" type="button" class="header__button btn">Оставить заявку</button>
-				<nav class="header__contacts links">
-					<a href="#" class="links__social _icon-wh" title="WhatsApp"></a>
-					<a href="#" class="links__social  _icon-tg" title="Telegram"></a>
-					<a href="tel:79055957466" class="links__phone h">+7 (905) 595-74-66</a>
-					<a href="tel:74953639972" class="links__main-phone _icon-phone h" title="Позвонить"><span>+7-495-363-99-72</span></a>
+				<nav class="header__contacts ct-socials">
+					<a href="#" class="ct-socials__link _icon-wh" title="WhatsApp"></a>
+					<a href="#" class="ct-socials__link  _icon-tg" title="Telegram"></a>
+					<a href="tel:79055957466" class="ct-socials__phone h">+7 (905) 595-74-66</a>
+					<a href="tel:74953639972" class="ct-main-phone _icon-phone h" title="Позвонить"><span>+7-495-363-99-72</span></a>
 				</nav>
 			</div>
 		</header>
@@ -42,12 +42,10 @@
 			<section class="cases-page__cases cases">
 				<div class="breadcrumbs">
 					<a href="#" class="breadcrumbs__back _icon-arr"></a>
-					<a href="#" class="breadcrumbs__title">
-						<h1>Наши кейсы</h1>
-					</a>
+					<h1 class="breadcrumbs__title">Наши кейсы</h1>
 				</div>
 				<div class="cases__container">
-					<ol class="cases__list counter">
+					<ol class="cases__list counter ol">
 						<li class="cases__item">
 							<picture><source srcset="img/main/cases1.webp" type="image/webp"><img src="img/main/cases1.jpg" alt="Изображение кейса" class="cases__image"></picture>
 							<h3 class="cases__name">Краткое описание</h3>
@@ -71,35 +69,41 @@
 						<li class="cases__item">
 							<picture><source srcset="img/main/cases1.webp" type="image/webp"><img src="img/main/cases1.jpg" alt="Изображение кейса" class="cases__image"></picture>
 							<h3 class="cases__name">Краткое описание</h3>
-							<a href="ase.html" class="cases__link btn-w">Подробнее</a>
+							<a href="case.html" class="cases__link btn-w">Подробнее</a>
 						</li>
 						<li class="cases__item">
 							<picture><source srcset="img/main/cases1.webp" type="image/webp"><img src="img/main/cases1.jpg" alt="Изображение кейса" class="cases__image"></picture>
 							<h3 class="cases__name">Краткое описание</h3>
-							<a href="ase.html" class="cases__link btn-w">Подробнее</a>
+							<a href="case.html" class="cases__link btn-w">Подробнее</a>
 						</li>
 						<li class="cases__item">
 							<picture><source srcset="img/main/cases1.webp" type="image/webp"><img src="img/main/cases1.jpg" alt="Изображение кейса" class="cases__image"></picture>
 							<h3 class="cases__name">Краткое описание</h3>
-							<a href="ase.html" class="cases__link btn-w">Подробнее</a>
+							<a href="case.html" class="cases__link btn-w">Подробнее</a>
 						</li>
 						<li class="cases__item">
 							<picture><source srcset="img/main/cases1.webp" type="image/webp"><img src="img/main/cases1.jpg" alt="Изображение кейса" class="cases__image"></picture>
 							<h3 class="cases__name">Краткое описание</h3>
-							<a href="ase.html" class="cases__link btn-w">Подробнее</a>
+							<a href="case.html" class="cases__link btn-w">Подробнее</a>
 						</li>
+
 					</ol>
 				</div>
 			</section>
-			<section class="cases-page__request bg request">
+			<section class="request">
 				<div class="request__container bg bg-request">
-					<form action="#" class="request__form form__form">
-						<input autocomplete="off" type="text" name="form[]" placeholder="Ваше имя" class="form__input">
-						<input autocomplete="off" type="email" name="form[]" placeholder="Ваш e-mail" class="form__input">
-						<input data-required data-phone-pattern autocomplete="off" type="text" name="form[]" placeholder="Ваш номер телефона" class="form__input">
-						<button data-popup="#form-success" type="submit" class="form__submit btn">Отправить</button>
+					<div class="request__form-wrapper">
+						<div>
+							<form action="#">
+								<input autocomplete="off" type="text" name="form[]" placeholder="Ваше имя">
+								<input autocomplete="off" type="email" name="form[]" placeholder="Ваш e-mail">
+								<input data-required data-phone-pattern autocomplete="off" type="text" name="form[]" placeholder="Ваш номер телефона">
+								<button data-popup="#form-success" type="submit" class="btn">Отправить</button>
+							</form>
+						</div>
 						<p class="form__text">Отправляя заявку на нашем сайте, вы соглашаетесь с политикой конфеденциальности</p>
-					</form>
+					</div>
+
 					<div class="request__content">
 						<h2 class="request__title">Остались вопросы?</h2>
 						<p class="request__text">Отправьте нам заявку и мы свяжемся с вами в ближайшее время</p>
@@ -121,14 +125,14 @@
 							<dt class="footer__dt">Режим работы:</dt>
 							<dd class="footer__dd">Пн-Пт с 9.00 - 19.00</dd>
 						</dl>
-						<a href="tel:74953639972" class="footer__main-phone _icon-phone h"><span>+7-495-363-99-72</span></a>
-						<a href="mailto:info@right-flow.ru" class="footer__mail _icon-mail h"><span>info@right-flow.ru</span></a>
-						<div class="footer__socials">
-							<a href="#" class="footer__social-link _icon-wh" title="WhatsApp"></a>
-							<a href="#" class="footer__social-link  _icon-tg" title="Telegram"></a>
-							<a href="tel:79055957466" class="footer__phone h">+7 (905) 595-74-66</a>
+						<a href="tel:74953639972" class="ct-main-phone _icon-phone h"><span>+7-495-363-99-72</span></a>
+						<a href="mailto:info@right-flow.ru" class="ct-mail _icon-mail h"><span>info@right-flow.ru</span></a>
+						<div class="ct-socials">
+							<a href="#" class="ct-socials__link _icon-wh" title="WhatsApp"></a>
+							<a href="#" class="ct-socials__link  _icon-tg" title="Telegram"></a>
+							<a href="tel:79055957466" class="ct-socials__phone h">+7 (905) 595-74-66</a>
 						</div>
-						<a href="#" class="footer__policy h">Политика конфиденциальности</a>
+						<a href="#" class="ct-policy h">Политика конфиденциальности</a>
 					</div>
 					<nav class="footer__menu">
 						<a href="#" class="footer__link h">Таможня</a>
@@ -151,12 +155,12 @@
 				<div class="popup__body success bg bg-popup2">
 					<h2 class="success__title">Ваша заявка принята.</h2>
 					<p class="success__text">Мы перезвоним вам в ближайшее время. Если нет времени ждать, то звоните или пишите в мессенджеры:</p>
-					<a href="tel:74953639972" class="success__main-phone _icon-phone h"><span>+7-495-363-99-72</span></a>
-					<a href="mailto:info@right-flow.ru" class="success__mail _icon-mail h"><span>info@right-flow.ru</span></a>
-					<div class="success__socials">
-						<a href="#" class="success__social-link _icon-wh" title="WhatsApp"></a>
-						<a href="#" class="success__social-link  _icon-tg" title="Telegram"></a>
-						<a href="tel:79055957466" class="success__phone h">+7 (905) 595-74-66</a>
+					<a href="tel:74953639972" class="ct-main-phone _icon-phone h"><span>+7-495-363-99-72</span></a>
+					<a href="mailto:info@right-flow.ru" class="ct-mail _icon-mail h"><span>info@right-flow.ru</span></a>
+					<div class="ct-socials">
+						<a href="#" class="ct-socials__link _icon-wh" title="WhatsApp"></a>
+						<a href="#" class="ct-socials__link  _icon-tg" title="Telegram"></a>
+						<a href="tel:79055957466" class="ct-social__phone h">+7 (905) 595-74-66</a>
 					</div>
 				</div>
 			</aside>
@@ -180,7 +184,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20230510161319"></script>
+	<script src="js/app.min.js?_v=20230515130314"></script>
 </body>
 
 </html>
