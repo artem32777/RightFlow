@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230521174301">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230521180116">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<meta name="theme-color" content="#3A477C">
 	<meta name="description" content="Описание страницы сайта.">
@@ -146,7 +146,14 @@
 					</ul>
 					<p class="trains__text">* Не является публичной офертой. Конечная стоимость услуг рассчитывается из конкретных параметров сделки и согласовывается с нашим менеджером</p>
 				</div>
-				<div class="trains__image"><picture><source srcset="img/main/transport.webp" type="image/webp"><img src="img/main/transport.jpg" alt="Изображение грузоперевозок"></picture></div>
+				<div class="trains__image">
+
+					<img src="img/main/transport.jpg" srcset="img/main/transport-small.jpg 320w,
+			img/main/transport-small.jpg 640w,
+      img/main/transport.jpg 1024w" sizes="(max-width: 600px) 300px,
+			(max-width: 900px) 600px,
+			1024px" alt="Изображение грузоперевозок">
+				</div>
 			</section>
 			<section class="form">
 				<h2 class="form__title">Отправить нам заявку</h2>
@@ -493,7 +500,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20230521174301"></script>
+	<script src="js/app.min.js?_v=20230521180116"></script>
 </body>
 
 </html>
